@@ -1,0 +1,179 @@
+rules_version = '2';
+
+// ===============================================================
+// Assumed Data Model
+// ===============================================================
+//
+// This security rules file assumes the following data structures:
+//
+// Collection: users
+// Document ID: {userId} (matches Firebase Auth UID: request.auth.uid)
+// Access: Strictly private to the authenticated owner (no public or
+//         cross-user access, as the document contains PII such as email).
+// Fields (all optional to support partial setDoc(..., { merge: true })):
+//   - displayName: string | null (optional, max 120 chars) - User display name
+//   - email: string | null (optional, max 254 chars, valid email or '') - User email (PII)
+//   - photoURL: string | null (optional, max 1000 chars, http(s) URL or '') - Avatar URL
+//   - userName: string | null (optional, max 100 chars) - App username / handle
+//   - theme: string | null (optional, enum: 'light', 'dark', '') - UI theme preference
+//   - city: string | null (optional, max 100 chars) - City for Panchang/local timings
+//   - activePathway: string | null (optional, max 100 chars) - Active learning pathway ID
+//   - lastRead: map | null (optional, max 15 keys) - Last-read progress map
+//   - sadhana: map | null (optional, max 20 keys) - Adult sadhana sync state
+//   - kidsSadhana: map | null (optional, max 20 keys) - Kids sadhana sync state
+//   - updatedAt: timestamp | number (optional, non-negative if number) - Last update time
+//   - createdAt: timestamp | number (optional, non-negative if number, immutable once set) - Creation time
+//
+// All other collections and subcollections are denied by default.
+// ===============================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+
+    // Check if the request is from an authenticated user
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Check if the authenticated user owns the target userId document
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Ensure the document contains only allowed fields (prevents schema pollution & privilege escalation)
+    function hasOnlyAllowedFields(data, fields) {
+      return data.keys().hasOnly(fields);
+    }
+
+    // Validate email format
+    function isValidEmail(email) {
+      return email is string &&
+             email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    }
+
+    // Validate HTTP/HTTPS URL format (blocks javascript:, data:, etc.)
+    function isValidUrl(url) {
+      return url is string &&
+             (url.matches("^https://.*") || url.matches("^http://.*"));
+    }
+
+    // Validate an optional nullable string with a maximum length bound
+    function isValidOptionalNullableString(data, field, maxLen) {
+      return !(field in data) ||
+             data[field] == null ||
+             (data[field] is string && data[field].size() <= maxLen);
+    }
+
+    // Validate an optional nullable email string
+    function isValidOptionalNullableEmail(data, field, maxLen) {
+      return !(field in data) ||
+             data[field] == null ||
+             (data[field] is string &&
+              data[field].size() <= maxLen &&
+              (data[field] == '' || isValidEmail(data[field])));
+    }
+
+    // Validate an optional nullable URL string
+    function isValidOptionalNullableUrl(data, field, maxLen) {
+      return !(field in data) ||
+             data[field] == null ||
+             (data[field] is string &&
+              data[field].size() <= maxLen &&
+              (data[field] == '' || isValidUrl(data[field])));
+    }
+
+    // Validate an optional nullable map with a maximum key count bound
+    function isValidOptionalNullableMap(data, field, maxKeys) {
+      return !(field in data) ||
+             data[field] == null ||
+             (data[field] is map && data[field].keys().size() <= maxKeys);
+    }
+
+    // Validate an optional timestamp or non-negative numeric timestamp
+    function isValidOptionalTimestampOrNumber(data, field) {
+      return !(field in data) ||
+             data[field] is timestamp ||
+             (data[field] is number && data[field] >= 0);
+    }
+
+    // Ensure createdAt cannot be modified or deleted once set
+    function isCreatedAtImmutable() {
+      return !('createdAt' in resource.data) ||
+             ('createdAt' in request.resource.data &&
+              request.resource.data.createdAt == resource.data.createdAt);
+    }
+
+    // ===============================================================
+    // Domain Validators (Called in BOTH create and update)
+    // ===============================================================
+
+    function allowedUserFields() {
+      return [
+        'displayName',
+        'email',
+        'photoURL',
+        'userName',
+        'theme',
+        'city',
+        'activePathway',
+        'lastRead',
+        'sadhana',
+        'kidsSadhana',
+        'updatedAt',
+        'createdAt'
+      ];
+    }
+
+    function isValidTheme(data) {
+      return !('theme' in data) ||
+             data.theme == null ||
+             (data.theme is string && data.theme in ['light', 'dark', '']);
+    }
+
+    function isValidUserProfile(data) {
+      return hasOnlyAllowedFields(data, allowedUserFields()) &&
+             isValidOptionalNullableString(data, 'displayName', 120) &&
+             isValidOptionalNullableEmail(data, 'email', 254) &&
+             isValidOptionalNullableUrl(data, 'photoURL', 1000) &&
+             isValidOptionalNullableString(data, 'userName', 100) &&
+             isValidTheme(data) &&
+             isValidOptionalNullableString(data, 'city', 100) &&
+             isValidOptionalNullableString(data, 'activePathway', 100) &&
+             isValidOptionalNullableMap(data, 'lastRead', 15) &&
+             isValidOptionalNullableMap(data, 'sadhana', 20) &&
+             isValidOptionalNullableMap(data, 'kidsSadhana', 20) &&
+             isValidOptionalTimestampOrNumber(data, 'updatedAt') &&
+             isValidOptionalTimestampOrNumber(data, 'createdAt');
+    }
+
+    // ===============================================================
+    // Collection Rules
+    // ===============================================================
+
+    match /users/{userId} {
+      // Strictly owner-only read to protect PII (email, profile data)
+      allow read: if isOwner(userId);
+
+      // Owner-only create with strict schema, type, and size validation
+      allow create: if isOwner(userId) &&
+                       isValidUserProfile(request.resource.data);
+
+      // Owner-only update with full schema validation and createdAt immutability
+      allow update: if isOwner(userId) &&
+                       isValidUserProfile(request.resource.data) &&
+                       isCreatedAtImmutable();
+
+      // Owner-only delete
+      allow delete: if isOwner(userId);
+    }
+
+    // Default deny all other collections, documents, and subcollections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
