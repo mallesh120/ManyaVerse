@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Search from '../Search/Search';
+import AuthButton from '../AuthButton/AuthButton';
 import './Navbar.css';
 
 /**
@@ -150,6 +151,8 @@ const Navbar = () => {
         >
           {isDarkMode ? '☀️' : '🌙'}
         </button>
+
+        <AuthButton />
 
         <button 
           className={`navbar-hamburger ${isMenuOpen ? 'open' : ''}`}

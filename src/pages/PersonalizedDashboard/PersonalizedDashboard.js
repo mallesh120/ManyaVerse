@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { usePanchangam } from '../../hooks/usePanchangam';
 import { useSadhana } from '../../hooks/useSadhana';
 import useTextToSpeech from '../../hooks/useTextToSpeech';
+import { useAuth } from '../../context/AuthContext';
 import StreakCalendar from '../../components/StreakCalendar/StreakCalendar';
 import { getDailyChallenge } from '../../data/dharmaChallenges';
 import { getLearningPathway, getAllLearningPathways } from '../../data/learningPathways';
@@ -21,6 +22,7 @@ const getGreetingForHour = () => {
 };
 
 const PersonalizedDashboard = () => {
+  const { syncProfilePatch } = useAuth();
   
   const [isMeditationTimerOpen, setIsMeditationTimerOpen] = useState(false);
   
@@ -65,6 +67,7 @@ const PersonalizedDashboard = () => {
     const nextId = e.target.value;
     setSelectedPathwayId(nextId);
     localStorage.setItem('divine_path_active_pathway', nextId);
+    syncProfilePatch({ activePathway: nextId });
   };
   
   // UI state
@@ -75,7 +78,7 @@ const PersonalizedDashboard = () => {
   const { speak, stop, isPlaying } = useTextToSpeech();
   
   // Continue reading state
-  const [lastRead] = useState(() => {
+  const [lastRead, setLastRead] = useState(() => {
     try {
       const savedReading = localStorage.getItem('divine_path_last_read');
       return savedReading ? JSON.parse(savedReading) : null;
@@ -83,6 +86,19 @@ const PersonalizedDashboard = () => {
       return null;
     }
   });
+
+  // React to cloud profile sync on sign-in
+  useEffect(() => {
+    const handleProfileSync = (e) => {
+      const data = e.detail;
+      if (!data) return;
+      if (data.userName) setUserName(data.userName);
+      if (data.activePathway) setSelectedPathwayId(data.activePathway);
+      if (data.lastRead) setLastRead(data.lastRead);
+    };
+    window.addEventListener('divineProfileSync', handleProfileSync);
+    return () => window.removeEventListener('divineProfileSync', handleProfileSync);
+  }, []);
 
   const { panchangamData, loading: panchangamLoading, currentCity, setCity, cities, placeName } = usePanchangam();
   
@@ -107,6 +123,7 @@ const PersonalizedDashboard = () => {
     setUserName(newName);
     if (newName.trim()) {
       localStorage.setItem('userName', newName);
+      syncProfilePatch({ userName: newName.trim().slice(0, 100) });
     }
   };
 

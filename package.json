@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@ishubhamx/panchangam-js": "^2.2.6",
+    "firebase": "^13.4.0",
     "framer-motion": "^12.38.0",
     "node-fetch": "^2.7.0",
     "react": "^19.1.1",

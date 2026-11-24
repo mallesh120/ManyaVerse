@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import SidebarLayout from './components/SidebarLayout/SidebarLayout';
 import PageTransition from './components/PageTransition/PageTransition';
 import LoadingSpinner from './components/ui/LoadingSpinner/LoadingSpinner';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 import PersonalizedDashboard from './pages/PersonalizedDashboard/PersonalizedDashboard';
 import './App.css';
 
@@ -121,6 +122,15 @@ function App() {
     </PageTransition>
   );
 
+  // Helper to wrap auth-gated route elements
+  const withAuth = (Component, featureName) => (
+    <RequireAuth featureName={featureName}>
+      <PageTransition>
+        <Component />
+      </PageTransition>
+    </RequireAuth>
+  );
+
   return (
     <div className={`App ${themeClass}`}>
       <AnimatePresence mode="wait">
@@ -128,36 +138,45 @@ function App() {
           <Routes location={location} key={location.pathname.split('/')[1]}>
             {/* Main Application Routes */}
             <Route path="/" element={<AdultsLayoutWrapper />}>
+              {/* Public Routes */}
               <Route index element={withTransition(PersonalizedDashboard)} />
-              <Route path="devotional" element={withTransition(HomePage)} />
               <Route path="gods" element={withTransition(GodsGalleryPage)} />
-
               <Route path="gods/:godId" element={withTransition(GodDetailPage)} />
-              <Route path="library" element={withTransition(LiteratureLibraryPage)} />
+
+              {/* Auth-Protected Routes */}
+              <Route path="devotional" element={withAuth(HomePage, 'Devotional Hub')} />
+              <Route path="library" element={withAuth(LiteratureLibraryPage, 'Literature Library')} />
               <Route path="festivals" element={<Navigate to="/calendar" state={{ activeTab: 'festivals' }} replace />} />
-              <Route path="festivals/:festivalId" element={withTransition(FestivalDetailPage)} />
-              <Route path="calendar" element={withTransition(PanchangPage)} />
-              <Route path="pujas" element={withTransition(PujaListPage)} />
-              <Route path="puja/:pujaId" element={withTransition(PujaGuidePage)} />
-              <Route path="ashtottaram/:deityId" element={withTransition(AshtottaramDetailPage)} />
-              <Route path="library/:bookId" element={withTransition(BookLandingPage)} />
-              <Route path="library/:bookId/:chapterId" element={withTransition(UniversalReaderPage)} />
-              <Route path="muhurta-finder" element={withTransition(MuhurtaFinderPage)} />
-              <Route path="fasting-guide" element={withTransition(FastingGuidePage)} />
-              <Route path="sacred-texts" element={withTransition(SacredTextsPage)} />
+              <Route path="festivals/:festivalId" element={withAuth(FestivalDetailPage, 'Festival Details')} />
+              <Route path="calendar" element={withAuth(PanchangPage, 'Panchang & Calendar')} />
+              <Route path="pujas" element={withAuth(PujaListPage, 'Puja Guides')} />
+              <Route path="puja/:pujaId" element={withAuth(PujaGuidePage, 'Puja Guide')} />
+              <Route path="ashtottaram/:deityId" element={withAuth(AshtottaramDetailPage, 'Ashtottaram')} />
+              <Route path="library/:bookId" element={withAuth(BookLandingPage, 'Literature Library')} />
+              <Route path="library/:bookId/:chapterId" element={withAuth(UniversalReaderPage, 'Literature Reader')} />
+              <Route path="muhurta-finder" element={withAuth(MuhurtaFinderPage, 'Muhurta Finder')} />
+              <Route path="fasting-guide" element={withAuth(FastingGuidePage, 'Fasting Guide')} />
+              <Route path="sacred-texts" element={withAuth(SacredTextsPage, 'Sacred Texts')} />
               <Route path="stotrams" element={<Navigate to="/sacred-texts" replace />} />
               <Route path="ashtottaram" element={<Navigate to="/sacred-texts" state={{ activeTab: 'ashtotharams' }} replace />} />
-              <Route path="stotrams/:categorySlug" element={withTransition(StotramCategoryPage)} />
-              <Route path="stotrams/read/:stotramTitle" element={withTransition(StotramReaderPage)} />
-              <Route path="festival-countdown" element={withTransition(FestivalCountdownPage)} />
-              <Route path="puja-reminders" element={withTransition(PujaReminderPage)} />
-              <Route path="japa-mala" element={withTransition(JapaMalaPage)} />
-              <Route path="virtual-shrine" element={withTransition(VirtualShrinePage)} />
+              <Route path="stotrams/:categorySlug" element={withAuth(StotramCategoryPage, 'Stotrams')} />
+              <Route path="stotrams/read/:stotramTitle" element={withAuth(StotramReaderPage, 'Stotram Reader')} />
+              <Route path="festival-countdown" element={withAuth(FestivalCountdownPage, 'Festival Countdown')} />
+              <Route path="puja-reminders" element={withAuth(PujaReminderPage, 'Puja Reminders')} />
+              <Route path="japa-mala" element={withAuth(JapaMalaPage, 'Japa Mala')} />
+              <Route path="virtual-shrine" element={withAuth(VirtualShrinePage, 'Virtual Mandir')} />
               <Route path="mandir" element={<Navigate to="/virtual-shrine" replace />} />
             </Route>
 
-            {/* Kids Zone */}
-            <Route path="/kids" element={<KidsLayout />}>
+            {/* Kids Zone (Auth-Protected) */}
+            <Route
+              path="/kids"
+              element={
+                <RequireAuth featureName="Kids Zone">
+                  <KidsLayout />
+                </RequireAuth>
+              }
+            >
               <Route index element={<Navigate to="home" replace />} />
               <Route path="home" element={withTransition(KidsDashboard)} />
               <Route path="stories" element={withTransition(StoryCatalog)} />
