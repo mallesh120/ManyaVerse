@@ -150,7 +150,7 @@ export const bhagavadGitaObject = {
         "God's equal love for all"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch9.jpg"
     },
     {
       number: 10,
@@ -207,7 +207,7 @@ export const bhagavadGitaObject = {
         "The Supreme Soul in all beings"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch13.jpg"
     },
     {
       number: 14,
@@ -221,7 +221,7 @@ export const bhagavadGitaObject = {
         "Symptoms of one who has transcended"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch14.jpg"
     },
     {
       number: 15,
@@ -249,7 +249,7 @@ export const bhagavadGitaObject = {
         "The importance of scripture"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch16.jpg"
     },
     {
       number: 17,
@@ -263,7 +263,7 @@ export const bhagavadGitaObject = {
         "Charity, austerity, and sacrifice in three modes"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch17.jpg"
     },
     {
       number: 18,
@@ -278,7 +278,7 @@ export const bhagavadGitaObject = {
         "The ultimate instruction: abandon all dharmas and surrender"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png",
+      illustration: "/images/literature/scenes/gita_ch18.jpg",
       isConclusion: true
     }
   ]

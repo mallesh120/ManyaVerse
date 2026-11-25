@@ -80,7 +80,7 @@ export const pujasData = [
         title: 'Preparation and Purification',
         description: 'Cleanse yourself and the puja area. Take a bath and wear clean clothes. Clean the puja area and spread a red cloth on the platform.',
         duration: '5 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step1.jpg',
         tips: ['Face east or north during puja', 'Keep all materials organized and within reach'],
         mantra: null
       },
@@ -89,7 +89,7 @@ export const pujasData = [
         title: 'Invocation (Avahana)',
         description: 'Place the Ganesha idol on the platform. Light the ghee lamp and incense sticks. Ring the bell and invite Lord Ganesha to be present.',
         duration: '3 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step2.jpg',
         tips: ['Visualize Lord Ganesha\'s presence', 'Maintain focus and devotion'],
         mantra: {
           sanskrit: 'ॐ गं गणपतये नमः',
@@ -103,7 +103,7 @@ export const pujasData = [
         title: 'Offering Water (Achamana)',
         description: 'Offer water three times to Lord Ganesha by sprinkling it with a spoon or your right hand. This purifies the deity.',
         duration: '2 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step3.jpg',
         tips: ['Use clean water', 'Sprinkle gently around the idol'],
         mantra: {
           sanskrit: 'ॐ अच्युताय नमः । ॐ अनन्ताय नमः । ॐ गोविन्दाय नमः',
@@ -117,7 +117,7 @@ export const pujasData = [
         title: 'Applying Kumkum and Chandan',
         description: 'Apply kumkum (red vermillion) and chandan (sandalwood paste) to the forehead of Lord Ganesha. Offer haldi and kumkum.',
         duration: '3 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step4.jpg',
         tips: ['Apply with ring finger', 'Use fresh kumkum and chandan'],
         mantra: {
           sanskrit: 'ॐ गणाध्यक्षाय नमः',
@@ -131,7 +131,7 @@ export const pujasData = [
         title: 'Offering Flowers',
         description: 'Offer red hibiscus flowers one by one to Lord Ganesha while chanting his names. Offer durva grass (sacred grass) in bunches of 3, 5, or 21.',
         duration: '5 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step5.jpg',
         tips: ['Offer flowers at the feet of the deity', 'Durva grass is very auspicious for Ganesha'],
         mantra: {
           sanskrit: 'ॐ वक्रतुण्डाय नमः । ॐ एकदन्ताय नमः । ॐ लम्बोदराय नमः',
@@ -145,7 +145,7 @@ export const pujasData = [
         title: 'Offering Food (Naivedya)',
         description: 'Offer modaks, ladoos, fruits, and other sweets to Lord Ganesha. Place them in front of the deity and offer with devotion.',
         duration: '3 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step6.jpg',
         tips: ['Modak is Ganesha\'s favorite', 'Offer with both hands'],
         mantra: {
           sanskrit: 'ॐ गजाननाय नमः',
@@ -159,7 +159,7 @@ export const pujasData = [
         title: 'Aarti',
         description: 'Perform aarti by circling the lit camphor or ghee lamp in front of Lord Ganesha in a clockwise direction. Ring the bell continuously.',
         duration: '5 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step7.jpg',
         tips: ['Perform 3, 5, or 7 circles', 'Sing or play Ganesha Aarti'],
         mantra: {
           sanskrit: 'जय गणेश जय गणेश जय गणेश देवा। माता जाकी पार्वती पिता महादेवा॥',
@@ -173,7 +173,7 @@ export const pujasData = [
         title: 'Pushpanjali and Prayers',
         description: 'Offer flowers with folded hands and recite Ganesha mantras or prayers. Ask for his blessings and express your wishes.',
         duration: '5 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step8.jpg',
         tips: ['Speak from your heart', 'Express gratitude'],
         mantra: {
           sanskrit: 'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥',
@@ -187,7 +187,7 @@ export const pujasData = [
         title: 'Pradakshina (Circumambulation)',
         description: 'Walk around the deity in a clockwise direction 3 times, or perform mental pradakshina if space is limited.',
         duration: '2 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step9.jpg',
         tips: ['Keep deity to your right', 'Maintain reverence'],
         mantra: {
           sanskrit: 'ॐ गं गणपतये नमः',
@@ -201,7 +201,7 @@ export const pujasData = [
         title: 'Conclusion and Prasad',
         description: 'Seek forgiveness for any mistakes during the puja. Distribute the prasad (blessed food) to family members and accept it as divine blessing.',
         duration: '3 minutes',
-        image: null,
+        image: '/images/pujas/ganesha_puja_step10.jpg',
         tips: ['Share prasad with everyone', 'Keep some for yourself'],
         mantra: {
           sanskrit: 'ॐ क्षमा प्रार्थना । ॐ गजाननाय नमः',

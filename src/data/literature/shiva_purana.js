@@ -117,7 +117,7 @@ export const shivaPuranaObject = {
         "Yoga and meditation practices"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_shiva_purana_shiva_parvati_marriage_1794419282068.jpg"
+      illustration: "/images/literature/scenes/shiva_purana_samhita5_uma.jpg"
     },
     {
       number: 6,
@@ -132,7 +132,7 @@ export const shivaPuranaObject = {
         "Pilgrimage to Shiva's sacred places"
       ],
       audioUrl: null,
-      illustration: "/images/literature/cover_shiva_purana_1787361516444.jpg",
+      illustration: "/images/literature/scenes/shiva_purana_samhita6_kailasa.jpg",
       sacredPlaces: [
         { name: "Somnath", location: "Gujarat", significance: "First Jyotirlinga" },
         { name: "Mallikarjuna", location: "Andhra Pradesh", significance: "Second Jyotirlinga" },
@@ -161,7 +161,7 @@ export const shivaPuranaObject = {
         "Stories of great Shiva devotees"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_shiva_purana_markandeya_devotion_1794419344700.jpg",
+      illustration: "/images/literature/scenes/shiva_purana_samhita7_vayaviya.jpg",
       stories: [
         {
           title: "Markandeya's Devotion",
