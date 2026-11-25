@@ -5,7 +5,7 @@ export const krishnaLeelaObject = {
   title: 'Krishna (The Divine Statesman)',
   type: 'Dashavatara',
   summary: 'The story of Lord Vishnu\'s eighth avatar, the mischievous butter-thief who delivered the Bhagavad Gita.',
-  imageUrl: '/images/literature/cover_krishna_leela_1787401978908.jpg',
+  imageUrl: '/images/literature/cover_krishna_leela_1787401978908.webp',
   hasIllustrations: true,
   hasAudio: false,
   introduction: "In the eighth of the ten great avatars, Lord Vishnu takes birth as Krishna. From a playful child stealing butter in Vrindavan, to the slayer of demons, and finally the wise charioteer who delivered the Bhagavad Gita, Krishna's life is full of divine magic, love, and profound philosophy.",

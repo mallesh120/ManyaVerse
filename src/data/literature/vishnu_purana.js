@@ -6,7 +6,7 @@ export const vishnuPuranaObject = {
   title: 'Vishnu Purana',
   type: 'purana',
   summary: 'One of the eighteen Mahapuranas, this sacred text glorifies Lord Vishnu and describes the creation, maintenance, and dissolution of the universe.',
-  imageUrl: '/images/literature/cover_vishnu_purana_1787361507333.jpg',
+  imageUrl: '/images/literature/cover_vishnu_purana_1787361507333.webp',
   introduction: "The Vishnu Purana is one of the eighteen Mahapuranas and is considered one of the most important Puranas. It describes the creation of the universe, the genealogy of gods and sages, the avatars of Vishnu, and provides guidelines for living a righteous life. It consists of six books (amshas) with approximately 23,000 verses.",
   hasAudio: true,
   hasIllustrations: true,
@@ -24,19 +24,19 @@ export const vishnuPuranaObject = {
         "Cosmic time cycles (yugas)"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_vishnu_purana_book1_creation_1794887180226.jpg",
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book1_creation_1794887180226.webp",
       stories: [
         {
           title: "Dhruva's Devotion",
           summary: "The story of young prince Dhruva who through intense devotion to Vishnu attained the Pole Star position.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/scene_batch7_3_1788521894536.jpg"
+          illustrationUrl: "/images/literature/scenes/scene_batch7_3_1788521894536.webp"
         },
         {
           title: "Prahlada and Hiranyakashipu",
           summary: "The demon king Hiranyakashipu's conflict with his devotee son Prahlada, leading to Vishnu's Narasimha avatar.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/narasimha_emerges_1789848096506.jpg"
+          illustrationUrl: "/images/literature/scenes/narasimha_emerges_1789848096506.webp"
         }
       ]
     },
@@ -53,7 +53,7 @@ export const vishnuPuranaObject = {
         "Duties of different life stages (ashramas)"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_vishnu_purana_book2_earth_divisions_1794887271005.jpg"
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book2_earth_divisions_1794887271005.webp"
     },
     {
       number: 3,
@@ -68,7 +68,7 @@ export const vishnuPuranaObject = {
         "The path to liberation"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_vishnu_purana_book3_cosmic_time_dharma_1794887200955.jpg"
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book3_cosmic_time_dharma_1794887200955.webp"
     },
     {
       number: 4,
@@ -83,13 +83,13 @@ export const vishnuPuranaObject = {
         "Future kings and the Kali Yuga"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_vishnu_purana_book4_royal_dynasties_1794887208249.jpg",
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book4_royal_dynasties_1794887208249.webp",
       stories: [
         {
           title: "Krishna's Birth and Childhood",
           summary: "The miraculous birth of Krishna in prison, his childhood in Gokul, and his divine pastimes.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/krishna_scene_4_1789220528934.jpg"
+          illustrationUrl: "/images/literature/scenes/krishna_scene_4_1789220528934.webp"
         }
       ]
     },
@@ -106,19 +106,19 @@ export const vishnuPuranaObject = {
         "Krishna's teachings and divine play"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_vishnu_purana_book5_krishna_leela_1794887216895.jpg",
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book5_krishna_leela_1794887216895.webp",
       stories: [
         {
           title: "Krishna and the Gopis",
           summary: "The divine love between Krishna and the Gopis, exemplifying the highest devotion.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/krishna_scene_6_1789220810013.jpg"
+          illustrationUrl: "/images/literature/scenes/krishna_scene_6_1789220810013.webp"
         },
         {
           title: "Lifting Govardhan Hill",
           summary: "Krishna lifts the Govardhan mountain to protect the villagers from Indra's wrath.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/krishna_scene_5_1789220725342.jpg"
+          illustrationUrl: "/images/literature/scenes/krishna_scene_5_1789220725342.webp"
         }
       ]
     },
@@ -135,7 +135,7 @@ export const vishnuPuranaObject = {
         "The ultimate dissolution of the universe"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_vishnu_purana_book6_dissolution_liberation_1794887286410.jpg"
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book6_dissolution_liberation_1794887286410.webp"
     }
   ]
 };

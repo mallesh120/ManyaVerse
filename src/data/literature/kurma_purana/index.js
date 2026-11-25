@@ -5,7 +5,7 @@ export const kurmaPuranaObject = {
   title: 'Kurma Avatar (The Giant Tortoise)',
   type: 'Dashavatara',
   summary: 'The story of Lord Vishnu\'s second avatar, a massive tortoise who supported a mountain on his back to churn the cosmic ocean.',
-  imageUrl: '/images/literature/cover_kurma_purana_1787361576998.jpg',
+  imageUrl: '/images/literature/cover_kurma_purana_1787361576998.webp',
   hasIllustrations: true,
   hasAudio: false,
   introduction: "In the second of the ten great avatars, Lord Vishnu takes the form of Kurma, a colossal, invincible tortoise. This story details the epic Samudra Manthan (Churning of the Cosmic Ocean), where gods and demons worked together to find the nectar of immortality.",

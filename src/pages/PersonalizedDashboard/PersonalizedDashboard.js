@@ -425,7 +425,7 @@ const PersonalizedDashboard = () => {
                       className="japa-progress-fill"
                       style={{ 
                         width: `${((japaCount % 108) / 108) * 100}%`,
-                        backgroundImage: `url(${process.env.PUBLIC_URL || ''}/images/rudraksha_bead.png)`
+                        backgroundImage: `url(${process.env.PUBLIC_URL || ''}/images/rudraksha_bead.webp)`
                       }}
                     ></div>
                   </div>

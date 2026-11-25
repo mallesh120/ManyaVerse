@@ -198,7 +198,7 @@ export const kidsStories = [
     title: "Little Krishna & The Butter Pot",
     category: "Gods & Heroes",
     coverEmoji: "🧈",
-    illustration: "/images/kids/krishna-steals-the-butter-makhan-chor-.png",
+    illustration: "/images/kids/krishna-steals-the-butter-makhan-chor-.webp",
     description: "The charming pastime of naughty Krishna teaming up with monkeys to taste fresh homemade butter.",
     readTime: "2 min",
     pages: [
@@ -206,7 +206,7 @@ export const kidsStories = [
         id: 1,
         text: "Mother Yashoda made the most delicious, fluffy golden butter in all of Gokul every morning.",
         imageEmoji: "🧈",
-        illustration: "/images/kids/krishna-steals-the-butter-makhan-chor-.png",
+        illustration: "/images/kids/krishna-steals-the-butter-makhan-chor-.webp",
         interactiveElement: "glow"
       },
       {
@@ -240,7 +240,7 @@ export const kidsStories = [
     title: "Hanuman & The Golden Sun",
     category: "Gods & Heroes",
     coverEmoji: "☀️",
-    illustration: "/images/kids/hanuman-eats-the-sun.png",
+    illustration: "/images/kids/hanuman-eats-the-sun.webp",
     description: "Young baby Hanuman mistakes the rising orange sun for a giant ripe mango and leaps into the sky!",
     readTime: "2 min",
     pages: [
@@ -248,7 +248,7 @@ export const kidsStories = [
         id: 1,
         text: "One bright morning, baby Hanuman woke up feeling very hungry and looked out at the golden horizon.",
         imageEmoji: "👶",
-        illustration: "/images/kids/hanuman-eats-the-sun.png",
+        illustration: "/images/kids/hanuman-eats-the-sun.webp",
         interactiveElement: "bounce"
       },
       {
@@ -282,7 +282,7 @@ export const kidsStories = [
     title: "The Clever Rabbit and the Lion",
     category: "Moral Fables",
     coverEmoji: "🐰",
-    illustration: "/images/kids/the-lion-and-the-clever-rabbit-panchatantra-.png",
+    illustration: "/images/kids/the-lion-and-the-clever-rabbit-panchatantra-.webp",
     description: "A timeless Panchatantra fable showing that sharp intelligence is far more powerful than physical strength.",
     readTime: "3 min",
     pages: [
@@ -290,7 +290,7 @@ export const kidsStories = [
         id: 1,
         text: "In a dense green jungle lived Bhasuraka, a fierce and proud lion who troubled all the other animals.",
         imageEmoji: "🦁",
-        illustration: "/images/kids/the-lion-and-the-clever-rabbit-panchatantra-.png",
+        illustration: "/images/kids/the-lion-and-the-clever-rabbit-panchatantra-.webp",
         interactiveElement: "shake"
       },
       {
@@ -324,7 +324,7 @@ export const kidsStories = [
     title: "The Monkey and the Crocodile",
     category: "Moral Fables",
     coverEmoji: "🐊",
-    illustration: "/images/kids/the-monkey-and-the-crocodile-panchatantra-.png",
+    illustration: "/images/kids/the-monkey-and-the-crocodile-panchatantra-.webp",
     description: "The famous Panchatantra tale of true friendship, loyalty, and quick thinking in times of trouble.",
     readTime: "3 min",
     pages: [
@@ -332,7 +332,7 @@ export const kidsStories = [
         id: 1,
         text: "A friendly monkey lived on a large rose-apple tree by a sparkling river, eating juicy red berries every day.",
         imageEmoji: "🍎",
-        illustration: "/images/kids/the-monkey-and-the-crocodile-panchatantra-.png",
+        illustration: "/images/kids/the-monkey-and-the-crocodile-panchatantra-.webp",
         interactiveElement: "tap-to-grow"
       },
       {

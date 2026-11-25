@@ -7,7 +7,7 @@ export const shivaAshtottaram = {
   name: 'Lord Shiva',
   title: 'Ashtottara Shatanamavali',
   description: 'The Destroyer, one of the principal deities of Hinduism',
-  image: '/images/Gods/shiva.png',
+  image: '/images/Gods/Shiva.webp',
   category: 'god',
   names: [
     {

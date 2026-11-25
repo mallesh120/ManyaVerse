@@ -5,7 +5,7 @@ export const panchatantraObject = {
   title: 'Panchatantra (Wisdom Tales)',
   type: 'Moral Stories',
   summary: 'Ancient fables featuring clever animals that teach profound lessons about friendship, strategy, and practical wisdom.',
-  imageUrl: '/images/literature/cover_panchatantra_1787402043269.jpg',
+  imageUrl: '/images/literature/cover_panchatantra_1787402043269.webp',
   hasIllustrations: true,
   hasAudio: false,
   introduction: "The Panchatantra is a world-famous collection of ancient Indian fables. Written by a wise scholar to teach three foolish princes how to rule a kingdom, these brilliant stories use talking animals to teach practical life lessons, strategy, and the true meaning of friendship.",

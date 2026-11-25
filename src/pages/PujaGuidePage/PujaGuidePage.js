@@ -225,6 +225,18 @@ const PujaGuidePage = () => {
               )}
             </div>
 
+            {currentStepData.image && (
+              <div className={styles['step-image-wrapper']}>
+                <img
+                  src={currentStepData.image}
+                  alt={`Step ${currentStepData.stepNumber}: ${currentStepData.title}`}
+                  className={styles['step-image']}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            )}
+
             <div className={styles['step-description']}>
               <p>{currentStepData.description}</p>
             </div>

@@ -478,7 +478,7 @@ const JapaMala = () => {
   const todaysMalas = Math.floor(japaCount / BEADS_PER_MALA);
   const goalProgressPercent = Math.min(100, Math.round((todaysMalas / malaGoal) * 100));
   const ringRotationDeg = -(beadStep * SLOT_ANGLE_DEG);
-  const rudrakshaBgUrl = `${process.env.PUBLIC_URL || ''}/images/rudraksha_bead.png`;
+  const rudrakshaBgUrl = `${process.env.PUBLIC_URL || ''}/images/rudraksha_bead.webp`;
 
   const ringSpring = prefersReducedMotion
     ? { duration: 0.05 }
