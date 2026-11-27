@@ -5,7 +5,7 @@ export const kalkiPuranaObject = {
   title: 'Kalki Avatar (The Future Warrior)',
   type: 'Dashavatara',
   summary: 'The prophecy of Lord Vishnu\'s tenth and final avatar, the blazing warrior who will arrive to end the dark age and restore truth.',
-  imageUrl: '/images/literature/cover_kalki_purana_1787402023608.jpg',
+  imageUrl: '/images/literature/cover_kalki_purana_1787402023608.webp',
   hasIllustrations: true,
   hasAudio: false,
   introduction: "The tenth and final avatar of Lord Vishnu has not yet arrived! The Kalki Purana tells the epic prophecy of the future. It describes how, at the very end of this dark age (Kali Yuga), Lord Kalki will arrive on a white horse with a blazing sword to destroy evil and bring about a new Golden Age of peace.",

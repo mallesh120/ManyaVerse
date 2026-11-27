@@ -9,7 +9,7 @@ export const ganeshaPuranaObject = {
   title: 'Stories of Lord Ganesha',
   type: 'Purana',
   summary: 'The wonderful, wisdom-filled stories of Lord Ganesha, the elephant-headed God of Beginnings and Intellect.',
-  imageUrl: '/images/literature/cover_ganesha_purana_1787361557998.jpg',
+  imageUrl: '/images/literature/cover_ganesha_purana_1787361557998.webp',
   hasIllustrations: true,
   hasAudio: false,
   introduction: "Lord Ganesha is one of the most beloved gods in Hinduism, worshipped as the remover of obstacles and the patron of arts and sciences. These fascinating stories from his childhood teach us about love, humility, intelligence, and devotion.",

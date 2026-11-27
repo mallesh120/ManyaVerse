@@ -453,7 +453,7 @@ const UniversalReaderPage = () => {
               <div className="kids-illustration-wrapper">
                 <img 
                   src={generatedImageUrl} 
-                  onError={(e) => { e.target.onerror = null; e.target.src = '/images/kids/default.png'; }}
+                  onError={(e) => { e.target.onerror = null; e.target.src = '/images/kids/default.webp'; }}
                   alt={`${title} illustration`} 
                   className="kids-illustration" 
                 />

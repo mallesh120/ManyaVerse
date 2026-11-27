@@ -3,10 +3,10 @@ import useSoundEffects from '../../../hooks/useSoundEffects';
 import { useSadhana } from '../../../hooks/useSadhana';
 import ArcadePlayerShell from './ArcadePlayerShell';
 import { getGameHighScore, saveGameHighScore } from './arcadeCatalog';
-import ganeshaIdleSrc from '../../../assets/images/Gods/ganesha_3d_idle.jpg';
-import ganeshaRunSrc from '../../../assets/images/Gods/ganesha_3d_running.jpg';
-import ganeshaEatSrc from '../../../assets/images/Gods/ganesha_eating.jpg';
-import ganeshaHurtSrc from '../../../assets/images/Gods/ganesha_hurt.jpg';
+import ganeshaIdleSrc from '../../../assets/images/Gods/ganesha_3d_idle.webp';
+import ganeshaRunSrc from '../../../assets/images/Gods/ganesha_3d_running.webp';
+import ganeshaEatSrc from '../../../assets/images/Gods/ganesha_eating.webp';
+import ganeshaHurtSrc from '../../../assets/images/Gods/ganesha_hurt.webp';
 import './CatchTheModak.css';
 
 const CANVAS_W = 800;

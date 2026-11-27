@@ -394,6 +394,23 @@
   color: var(--text-muted);
 }
 
+.step-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 24px;
+  max-width: 460px;
+}
+
+.step-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 153, 51, 0.28);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+  object-fit: cover;
+  display: block;
+}
+
 .step-description {
   font-size: 1.1rem;
   line-height: 1.8;

@@ -6,7 +6,7 @@ export const shivaPuranaObject = {
   title: 'Shiva Purana',
   type: 'purana',
   summary: 'One of the eighteen Mahapuranas, dedicated to Lord Shiva, describing his glory, forms, sacred places, and stories of devotees.',
-  imageUrl: '/images/literature/cover_shiva_purana_1787361516444.jpg',
+  imageUrl: '/images/literature/cover_shiva_purana_1787361516444.webp',
   introduction: "The Shiva Purana is one of the eighteen Mahapuranas and is dedicated to Lord Shiva. It glorifies Shiva as the supreme being, describes his various forms and manifestations, narrates stories of his devotees, and provides guidelines for worship and spiritual practices. It contains approximately 24,000 verses organized into seven samhitas (sections).",
   hasAudio: true,
   hasIllustrations: true,
@@ -24,7 +24,7 @@ export const shivaPuranaObject = {
         "The power of the sacred syllable 'Om Namah Shivaya'"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_shiva_purana_samhita1_vidyeshvara_1794887651080.jpg"
+      illustration: "/images/literature/scenes/scene_shiva_purana_samhita1_vidyeshvara_1794887651080.webp"
     },
     {
       number: 2,
@@ -40,27 +40,27 @@ export const shivaPuranaObject = {
         "Stories of devoted followers"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_shiva_purana_samhita2_rudra_1794887661825.jpg",
+      illustration: "/images/literature/scenes/scene_shiva_purana_samhita2_rudra_1794887661825.webp",
       stories: [
         {
           title: "Daksha's Sacrifice and Sati's Sacrifice",
           summary: "Sati attends her father Daksha's sacrifice despite Shiva not being invited. Unable to bear the insult to Shiva, she immolates herself.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_daksha_sati_1794419264814.jpg",
+          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_daksha_sati_1794419264814.webp",
           keyMessage: "Devotion to one's chosen deity above all else"
         },
         {
           title: "Shiva's Marriage to Parvati",
           summary: "After Sati's death, she is reborn as Parvati and performs severe penance to win Shiva as her husband.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_shiva_parvati_marriage_1794419282068.jpg",
+          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_shiva_parvati_marriage_1794419282068.webp",
           keyMessage: "The power of devotion and determination"
         },
         {
           title: "Birth of Ganesha",
           summary: "Parvati creates Ganesha from sandalwood paste. Shiva unknowingly beheads him and later restores him with an elephant's head.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/ganesha_birth_14_1788702366241.jpg",
+          illustrationUrl: "/images/literature/scenes/ganesha_birth_14_1788702366241.webp",
           keyMessage: "Obedience and the blessings of misfortune"
         }
       ]
@@ -78,13 +78,13 @@ export const shivaPuranaObject = {
         "Shiva's role in the cosmic cycles"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_shiva_purana_samhita3_shatrudra_1794887681270.jpg",
+      illustration: "/images/literature/scenes/scene_shiva_purana_samhita3_shatrudra_1794887681270.webp",
       stories: [
         {
           title: "The Cosmic Dance (Tandava)",
           summary: "Shiva performs the Tandava, the cosmic dance of creation, preservation, and destruction.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_tandava_1794419327583.jpg",
+          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_tandava_1794419327583.webp",
           keyMessage: "The rhythm of the universe"
         }
       ]
@@ -102,7 +102,7 @@ export const shivaPuranaObject = {
         "Rituals for different occasions"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/scene_shiva_purana_samhita4_kotirudra_1794887691499.jpg"
+      illustration: "/images/literature/scenes/scene_shiva_purana_samhita4_kotirudra_1794887691499.webp"
     },
     {
       number: 5,
@@ -117,7 +117,7 @@ export const shivaPuranaObject = {
         "Yoga and meditation practices"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/shiva_purana_samhita5_uma.jpg"
+      illustration: "/images/literature/scenes/shiva_purana_samhita5_uma.webp"
     },
     {
       number: 6,
@@ -132,7 +132,7 @@ export const shivaPuranaObject = {
         "Pilgrimage to Shiva's sacred places"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/shiva_purana_samhita6_kailasa.jpg",
+      illustration: "/images/literature/scenes/shiva_purana_samhita6_kailasa.webp",
       sacredPlaces: [
         { name: "Somnath", location: "Gujarat", significance: "First Jyotirlinga" },
         { name: "Mallikarjuna", location: "Andhra Pradesh", significance: "Second Jyotirlinga" },
@@ -161,13 +161,13 @@ export const shivaPuranaObject = {
         "Stories of great Shiva devotees"
       ],
       audioUrl: null,
-      illustration: "/images/literature/scenes/shiva_purana_samhita7_vayaviya.jpg",
+      illustration: "/images/literature/scenes/shiva_purana_samhita7_vayaviya.webp",
       stories: [
         {
           title: "Markandeya's Devotion",
           summary: "Young Markandeya, destined to die at sixteen, defeats death through his unwavering devotion to Shiva.",
           hasIllustration: true,
-          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_markandeya_devotion_1794419344700.jpg",
+          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_markandeya_devotion_1794419344700.webp",
           keyMessage: "Devotion can conquer even death"
         }
       ]

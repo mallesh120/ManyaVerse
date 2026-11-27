@@ -10,7 +10,7 @@ export const hanumanStoryObject = {
   title: 'The Story of Hanuman',
   type: 'Biography',
   summary: 'The complete, heroic biography of Lord Hanuman, from his miraculous birth to becoming an immortal guardian of the earth.',
-  imageUrl: '/images/literature/cover_hanuman_1787361525880.jpg',
+  imageUrl: '/images/literature/cover_hanuman_1787361525880.webp',
   hasIllustrations: true,
   hasAudio: false,
   introduction: "Lord Hanuman is the ultimate symbol of strength, devotion, and selfless service. This detailed biography traces his incredible journey, starting from his birth as the son of the Wind God, his education under the Sun, his divine meeting with Lord Rama, his heroic deeds in the Ramayana, and his eternal life as a Chiranjeevi.",
